@@ -15,11 +15,18 @@ const CreateExpense = () => {
 
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!expenseName || !amount || !category || !date) {
-      alert("Please fill all fields");
-      return;
-    }
+  e.preventDefault();
+  
+  if (
+    expenseName.trim() === "" ||
+    amount === "" ||
+    isNaN(amount) ||
+    category.trim() === "" ||
+    date.trim() === ""
+  ) {
+    alert("Please fill all fields properly");
+    return;
+  }
 
     const newTransaction = {
       userid,
