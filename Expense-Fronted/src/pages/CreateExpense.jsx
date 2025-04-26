@@ -35,7 +35,7 @@ const CreateExpense = () => {
       setLoading(true);
       console.log("Submitting:", newTransaction);
 
-      const res = await fetch("http://localhost:8080/api/v1/transaction/add-transaction", {
+      const res = await fetch("https://tried1.onrender.com/api/v1/transaction/add-transaction", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
