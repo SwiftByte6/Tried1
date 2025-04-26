@@ -4,7 +4,6 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const colors = require("colors");
 const connectDb = require("./config/connectDb");
-const path = require("path");
 
 // config dot env file
 dotenv.config();
@@ -28,21 +27,14 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// Serve static files for the frontend if in production
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.resolve(__dirname, "Expense-Fronted", "dist")));
-  app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "Expense-Fronted", "dist", "index.html"));
-  });
-} else {
-  app.get("/", (req, res) => {
-    res.send("Welcome to the app!");
-  });
-}
-
-// routes
+// API routes
 app.use("/api/v1/users", require("./routes/userRoute"));
 app.use("/api/v1/transaction", require("./routes/transactionRoute"));
+
+// root route
+app.get("/", (req, res) => {
+  res.send("Welcome to the app!");
+});
 
 // port
 const PORT = process.env.PORT || 8080;
