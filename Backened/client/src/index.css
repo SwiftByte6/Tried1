@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .content {
+    height: 80vh;
+  }
+  
+  .register-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
+  /* new */
+  /* Auth Pages Styling */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .auth-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background-color: white;
+  }
+  
+  .auth-title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: 600;
+    color: #1890ff;
+  }
+  
+  .auth-form .ant-form-item {
+    margin-bottom: 20px;
+  }
+  
+  .auth-form .ant-input-affix-wrapper {
+    padding: 10px 11px;
+  }
+  
+  .social-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .google-btn {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    color: #757575;
+  }
+  
+  .google-btn:hover {
+    background-color: #f2f2f2;
+    color: #4285f4;
+    border-color: #4285f4;
+  }
+  
+  .github-btn {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    color: #333333;
+  }
+  
+  .github-btn:hover {
+    background-color: #f2f2f2;
+    color: #24292e;
+    border-color: #24292e;
+  }
+  
+  .auth-footer {
+    text-align: center;
+    margin-top: 16px;
+  }
+  
+  .auth-footer a {
+    color: #1890ff;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .auth-card {
+      padding: 20px;
+    }
+    
+    .social-login {
+      grid-template-columns: 1fr;
+    }
+  }
+/* ended  */
+/* started transaction page  */
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px ,20px;
+  box-shadow: 0 0 3px gray;
+}

@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+.cursor {
+    pointer-events: none;
+  }
+  
+   
+   html, body {
+    box-sizing: border-box;
+  }
+  
